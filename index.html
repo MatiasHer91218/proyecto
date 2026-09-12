@@ -40,12 +40,6 @@
             <div class="texto">
                 <p>Nació el 24 de marzo de 1831 en Xamirás, Acebedo del Río (Orense, España). Su infancia en la aldea estuvo marcada por una sólida fe familiar, el trabajo agrícola y un vivo interés por ayudar a los necesitados.</p>
                 <p>Durante sus estudios en Celanova sintió la llamada al sacerdocio y a la vocación educativa siguiendo las huellas de San José de Calasanz. Ingresó en el noviciado escolapio de Madrid en 1850, emitiendo sus votos solemnes en 1853 y ordenándose sacerdote en 1856.</p>
-                <a href="https://www.google.com/maps/search/?api=1&query=Xamir%C3%A1s%2C%20Acebedo%20del%20R%C3%ADo%2C%20Ourense%2C%20Espa%C3%B1a"
-                    target="_blank"
-                   rel="noopener noreferrer"
-                   class="btn">
-                    📍 Ver Xamirás en Google Maps
-                </a>
             </div>
             <div class="imagen">
                 <img src="./imagenes/retrato.jpg" alt="Retrato de San Faustino Míguez">
@@ -89,6 +83,51 @@
             </div>
         </div>
     </section>
+
+    <!-- SECCIÓN 4: RECURSO INTERACTIVO / TRIVIA -->
+    <section id="quiz" class="seccion fondo-suave">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">¿Cuánto aprendiste sobre San Faustino Míguez?</h2>
+            <p class="subtitulo">Pon a prueba tus conocimientos sobre su vida, obra y legado calasancio.</p>
+            
+            <div class="quiz-container">
+                <form id="quiz-form">
+                    
+                    <!-- Pregunta 1 -->
+                    <div class="pregunta">
+                        <h3>1. ¿En qué país realizó San Faustino importantes observaciones y docencia en sus inicios como misionero?</h3>
+                        <label><input type="radio" name="p1" value="a"> A) Argentina</label><br>
+                        <label><input type="radio" name="p1" value="b"> B) Cuba </label><br>
+                        <label><input type="radio" name="p1" value="c"> C) Italia</label>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="pregunta">
+                        <h3>2. ¿Qué faceta destacó a San Faustino Míguez además de ser sacerdote y educador escolapio?</h3>
+                        <label><input type="radio" name="p2" value="a"> A) Científico Botánico e Investigador Medicinal</label><br>
+                        <label><input type="radio" name="p2" value="b"> B) Arquitecto de Catedrales</label><br>
+                        <label><input type="radio" name="p2" value="c"> C) Pintor Renacentista</label>
+                    </div>
+
+                    <!-- Pregunta 3 -->
+                    <div class="pregunta">
+                        <h3>3. ¿Qué congregación religiosa fundó San Faustino en 1885 para la promoción de la mujer?</h3>
+                        <label><input type="radio" name="p3" value="a"> A) Hermanas Escolapias de Jesús</label><br>
+                        <label><input type="radio" name="p3" value="b"> B) Hijas de la Divina Pastora</label><br>
+                        <label><input type="radio" name="p3" value="c"> C) Misioneras de la Caridad</label>
+                    </div>
+
+                    <button type="button" id="btn-evaluar" class="btn">Enviar Respuestas</button>
+                </form>
+
+                <!-- Contenedor del Resultado -->
+                <div id="resultado" class="resultado-box hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VÍNCULO AL SCRIPT JAVASCRIPT -->
+    <script src="./js/script.js"></script>
 
     <!-- SECCIÓN FUENTES Y CRÉDITOS -->
     <section id="fuentes" class="seccion fondo-oscuro">
