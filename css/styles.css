@@ -300,3 +300,24 @@ footer p { margin: 0; }
     header h1, header h2, header p { color: #000; }
     article { border: 0; padding: 0; }
 }
+
+/* Tarjetas de imágenes y responsividad */
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formato para figuras con pie de foto */
+figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 6px;
+    font-style: italic;
+}
