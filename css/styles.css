@@ -1,0 +1,302 @@
+/* ==========================================================
+   Rostros de la Santidad Escolapia - San Faustino Míguez
+   Hoja de estilos única: index.html y punto02 a punto16
+   ========================================================== */
+
+/* ---------- Variables de diseño ---------- */
+:root {
+    --azul-profundo: #14284b;   /* encabezado, títulos */
+    --azul-medio:    #28508a;   /* enlaces */
+    --azul-niebla:   #e6ecf4;   /* fondos suaves */
+    --oro:           #c8962e;   /* acento: filetes y marcadores */
+    --papel:         #f7f8fa;   /* fondo de página */
+    --blanco:        #ffffff;
+    --texto:         #1d2433;
+    --texto-suave:   #566074;
+    --linea:         #d3dae6;
+
+    --serif: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+    --sans:  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    --ancho-lectura: 46rem;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem; /* espacio para el menú fijo al saltar a anclas */
+}
+
+body {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--texto);
+    background: var(--papel);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Encabezado ---------- */
+header {
+    background: var(--azul-profundo);
+    color: var(--blanco);
+    text-align: center;
+    padding: 3rem 1.25rem 2.5rem;
+    border-bottom: 4px solid var(--oro);
+}
+
+header h1 {
+    margin: 0 0 .5rem;
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .04em;
+    color: #e8c777;
+}
+
+header h2 {
+    margin: 0;
+    max-width: 24ch;
+    margin-inline: auto;
+    font-family: var(--serif);
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-wrap: balance;
+    color: #e8c777;
+}
+
+header p {
+    max-width: 42rem;
+    margin: 1.25rem auto 0;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: #d5deec;
+}
+
+/* ---------- Navegación ---------- */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--blanco);
+    border-bottom: 1px solid var(--linea);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .25rem .5rem;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+    max-width: 60rem;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: .5rem .9rem;
+    border-radius: 6px;
+    font-family: var(--sans);
+    font-size: .9375rem;
+    font-weight: 500;
+    color: var(--azul-profundo);
+    text-decoration: none;
+    transition: background-color .15s, color .15s;
+}
+
+nav a:hover {
+    background: var(--azul-niebla);
+    color: var(--azul-medio);
+}
+
+/* ---------- Contenido principal ---------- */
+main {
+    max-width: var(--ancho-lectura);
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 3.5rem;
+}
+
+section + section {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--linea);
+}
+
+main h2 {
+    margin: 0 0 1.25rem;
+    padding-left: .9rem;
+    border-left: 4px solid var(--oro);
+    font-size: clamp(1.4rem, 3.5vw, 1.85rem);
+    line-height: 1.25;
+    color: var(--azul-profundo);
+    text-wrap: balance;
+}
+
+main h3 {
+    margin: 2rem 0 .6rem;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: var(--azul-profundo);
+}
+
+p { margin: 0 0 1.1rem; }
+
+strong { color: var(--azul-profundo); }
+
+em { font-style: italic; }
+
+main a {
+    color: var(--azul-medio);
+    text-underline-offset: .2em;
+}
+
+main a:hover { color: var(--azul-profundo); }
+
+/* ---------- Artículos (páginas punto) ---------- */
+article {
+    background: var(--blanco);
+    border: 1px solid var(--linea);
+    border-radius: 10px;
+    padding: 1.75rem 1.5rem;
+}
+
+article > :first-child { margin-top: 0; }
+article > :last-child  { margin-bottom: 0; }
+
+/* ---------- Listas generales ---------- */
+article ul,
+article ol {
+    margin: 0 0 1.25rem;
+    padding-left: 1.4rem;
+}
+
+article li { margin-bottom: .6rem; }
+
+article li::marker { color: var(--oro); font-weight: 700; }
+
+/* ---------- Index: datos biográficos ---------- */
+#biografia ul {
+    list-style: none;
+    padding: 0;
+}
+
+#biografia li {
+    margin: 0;
+    padding: .75rem 0;
+    border-bottom: 1px solid var(--linea);
+}
+
+#biografia li:last-child { border-bottom: 0; }
+
+#biografia li strong {
+    display: block;
+    font-family: var(--sans);
+    font-size: .875rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+}
+
+@media (min-width: 40rem) {
+    #biografia li {
+        display: grid;
+        grid-template-columns: 12rem 1fr;
+        gap: 1rem;
+    }
+    #biografia li strong { font-size: .9375rem; }
+}
+
+/* ---------- Index: cronología (línea de tiempo) ---------- */
+#cronologia ol {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 2px solid var(--linea);
+}
+
+#cronologia li {
+    position: relative;
+    margin: 0 0 1.25rem;
+    padding-left: .5rem;
+}
+
+#cronologia li::before {
+    content: "";
+    position: absolute;
+    left: calc(-1.5rem - 7px);
+    top: .55rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--oro);
+    border: 2px solid var(--papel);
+    box-shadow: 0 0 0 1px var(--oro);
+}
+
+#cronologia li strong {
+    display: block;
+    font-family: var(--sans);
+    font-size: .9375rem;
+    color: var(--azul-medio);
+}
+
+/* ---------- Index: conclusión y fuentes ---------- */
+#conclusion p:first-of-type {
+    font-size: 1.15rem;
+    color: var(--azul-profundo);
+}
+
+#fuentes ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    font-family: var(--sans);
+    font-size: .9375rem;
+    color: var(--texto-suave);
+}
+
+#fuentes li { margin-bottom: .4rem; }
+
+/* ---------- Pie de página ---------- */
+footer {
+    background: var(--azul-profundo);
+    color: #c3cfe2;
+    text-align: center;
+    padding: 1.75rem 1.25rem;
+    border-top: 4px solid var(--oro);
+    font-family: var(--sans);
+    font-size: .875rem;
+}
+
+footer p { margin: 0; }
+
+/* ---------- Accesibilidad ---------- */
+:focus-visible {
+    outline: 3px solid var(--oro);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width: 36rem) {
+    body { font-size: 1rem; }
+    header { padding: 2.25rem 1rem 2rem; }
+    article { padding: 1.25rem 1rem; }
+    nav a { padding: .45rem .7rem; font-size: .875rem; }
+}
+
+/* ---------- Impresión ---------- */
+@media print {
+    nav { display: none; }
+    body { background: #fff; }
+    header, footer { background: none; color: #000; border-color: #000; }
+    header h1, header h2, header p { color: #000; }
+    article { border: 0; padding: 0; }
+}
