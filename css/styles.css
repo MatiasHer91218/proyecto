@@ -321,3 +321,120 @@ figcaption {
     margin-top: 6px;
     font-style: italic;
 }
+
+
+/* ==========================================
+   Fase 4: Cuestionario interactivo
+   ========================================== */
+
+.tarjeta-quiz {
+    background: var(--blanco);
+    border: 1px solid var(--linea);
+    border-top: 4px solid var(--oro);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(20, 40, 75, 0.08);
+}
+
+#progreso-quiz {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--azul-medio);
+}
+
+#pregunta-texto {
+    margin-top: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+#opciones-quiz {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.opcion-quiz,
+#siguiente-quiz,
+#reiniciar-quiz {
+    font-family: var(--sans);
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.opcion-quiz {
+    width: 100%;
+    text-align: left;
+    color: var(--azul-profundo);
+    background: var(--blanco);
+    border: 1px solid var(--linea);
+}
+
+.opcion-quiz:hover:not(:disabled) {
+    background: var(--azul-niebla);
+    border-color: var(--azul-medio);
+}
+
+.opcion-quiz.correcta {
+    background: #e4f5e9;
+    border-color: #278548;
+    color: #175b2c;
+}
+
+.opcion-quiz.incorrecta {
+    background: #fde8e7;
+    border-color: #c43d37;
+    color: #8c211d;
+}
+
+.opcion-quiz:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+#siguiente-quiz,
+#reiniciar-quiz {
+    margin-top: 1rem;
+    background: var(--azul-profundo);
+    color: var(--blanco);
+    border: 1px solid var(--azul-profundo);
+}
+
+#siguiente-quiz:hover:not(:disabled),
+#reiniciar-quiz:hover {
+    background: var(--azul-medio);
+}
+
+#siguiente-quiz:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.explicacion-quiz {
+    margin: 1rem 0 0;
+    padding: 1rem;
+    border-left: 4px solid var(--oro);
+    background: var(--papel);
+}
+
+#resultado-quiz {
+    padding: 1rem 0;
+}
+
+#resultado-quiz h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 36rem) {
+    .tarjeta-quiz {
+        padding: 1rem;
+    }
+
+    .opcion-quiz,
+    #siguiente-quiz,
+    #reiniciar-quiz {
+        width: 100%;
+    }
+}

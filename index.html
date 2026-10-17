@@ -21,6 +21,7 @@
             <li><a href="#cronologia"><svg class="icono" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Cronología Resumida</a></li>
             <li><a href="#conclusion"><svg class="icono" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 9.5"/></svg>Conclusión</a></li>
             <li><a href="#fuentes"><svg class="icono" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/><path d="M9 8h7"/></svg>Fuentes</a></li>
+            <li><a href="#quiz"><svg class="icono" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h2"/><path d="m8 13 1.5 1.5L12 12"/><path d="M14 8h2"/><path d="M14 14h2"/></svg> Cuestionario</a></li>
         </ul>
     </nav>
 
@@ -91,6 +92,50 @@
                 Recordado y venerado hoy como sacerdote escolapio, científico, educador y promotor de la mujer, San Faustino es un testimonio perdurable de cómo el conocimiento, la ciencia y la fe se integran plenamente cuando se ponen con generosidad al servicio de la humanidad.
             </p>
         </section>
+
+        
+        <!-- Cuestionario interactivo -->
+        <section id="quiz">
+            <h2>¿Cuánto sabés sobre San Faustino Míguez?</h2>
+
+            <p>
+                Poné a prueba tus conocimientos sobre su vida,
+                su vocación religiosa, su labor científica
+                y su legado educativo.
+            </p>
+
+            <article class="tarjeta-quiz">
+                <div id="formulario-quiz">
+                    <p id="progreso-quiz" aria-live="polite"></p>
+
+                    <h3 id="pregunta-texto"></h3>
+
+                    <div id="opciones-quiz"></div>
+
+                    <button
+                        type="button"
+                        id="siguiente-quiz"
+                        disabled>
+                        Siguiente pregunta
+                    </button>
+                </div>
+
+                <div
+                    id="resultado-quiz"
+                    tabindex="-1"
+                    aria-live="polite"
+                    hidden>
+                </div>
+
+                <button
+                    type="button"
+                    id="reiniciar-quiz">
+                    Volver a jugar
+                </button>
+            </div>
+        </article>
+    </section>
+
 
         <!-- Sección de Fuentes de Información para Respaldar los Datos -->
         <section id="fuentes">
@@ -165,5 +210,6 @@
         <p>Nicolás Hernández y Matías Cabaleiro - 3ºH</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
